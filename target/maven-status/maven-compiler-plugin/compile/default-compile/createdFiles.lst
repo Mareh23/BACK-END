@@ -1,5 +1,6 @@
 com\miportafolio\mariaz\Interface\IPersonaService.class
 com\miportafolio\mariaz\Security\jwt\JwtProvider.class
+com\miportafolio\mariaz\Dto\dtoHys.class
 com\miportafolio\mariaz\MariazApplication.class
 com\miportafolio\mariaz\Repository\IPersonaRepository.class
 com\miportafolio\mariaz\Security\Dto\NuevoUsuario.class
@@ -10,10 +11,12 @@ com\miportafolio\mariaz\Security\Dto\JwtDto.class
 com\miportafolio\mariaz\Security\Enums\RolNombre.class
 com\miportafolio\mariaz\Security\jwt\JwtEntryPoint.class
 com\miportafolio\mariaz\Security\Controller\AuthController.class
+com\miportafolio\mariaz\Service\Shys.class
 com\miportafolio\mariaz\Service\SEducacion.class
 com\miportafolio\mariaz\Security\Entity\UsuarioPrincipal.class
 com\miportafolio\mariaz\Security\jwt\JwtTokenFilter.class
 com\miportafolio\mariaz\Service\SExperiencia.class
+com\miportafolio\mariaz\Entity\hys.class
 com\miportafolio\mariaz\Security\MainSecurity.class
 com\miportafolio\mariaz\Dto\dtoExperiencia.class
 com\miportafolio\mariaz\Security\Controller\Mensaje.class
@@ -31,4 +34,6 @@ com\miportafolio\mariaz\Security\Dto\LoginUsuario.class
 com\miportafolio\mariaz\Security\Repository\iUsuarioRepository.class
 com\miportafolio\mariaz\Security\Service\UserDetailsImpl.class
 com\miportafolio\mariaz\Security\Service\UsuarioService.class
+com\miportafolio\mariaz\Repository\Rhys.class
+com\miportafolio\mariaz\Controller\CHys.class
 com\miportafolio\mariaz\Security\Repository\iRolRepository.class
