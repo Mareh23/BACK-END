@@ -1,6 +1,6 @@
 package com.miportafolio.mariaz.Dto;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class dtoExperiencia {
     @NotBlank
