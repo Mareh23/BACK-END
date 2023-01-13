@@ -13,7 +13,6 @@ D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\Re
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Dto\dtoExperiencia.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Entity\hys.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Entity\Educacion.java
-D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Interface\IPersonaService.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Repository\IPersonaRepository.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\Entity\UsuarioPrincipal.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Entity\Persona.java
@@ -29,6 +28,7 @@ D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\MariazAppli
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\Controller\AuthController.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\Dto\LoginUsuario.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\Service\UserDetailsImpl.java
+D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Dto\dtoPersona.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Entity\Experiencia.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Repository\REducacion.java
 D:\Argentina Programa\BACK-END\src\main\java\com\miportafolio\mariaz\Security\jwt\JwtProvider.java

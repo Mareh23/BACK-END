@@ -1,4 +1,3 @@
-com\miportafolio\mariaz\Interface\IPersonaService.class
 com\miportafolio\mariaz\Security\jwt\JwtProvider.class
 com\miportafolio\mariaz\Dto\dtoHys.class
 com\miportafolio\mariaz\MariazApplication.class
@@ -19,6 +18,7 @@ com\miportafolio\mariaz\Service\SExperiencia.class
 com\miportafolio\mariaz\Entity\hys.class
 com\miportafolio\mariaz\Security\MainSecurity.class
 com\miportafolio\mariaz\Dto\dtoExperiencia.class
+com\miportafolio\mariaz\Dto\dtoPersona.class
 com\miportafolio\mariaz\Security\Controller\Mensaje.class
 com\miportafolio\mariaz\Entity\Experiencia.class
 com\miportafolio\mariaz\Controller\CEducacion.class
