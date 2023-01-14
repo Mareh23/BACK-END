@@ -21,7 +21,7 @@ import org.apache.commons.lang3.StringUtils;
 
 
 @RestController
-@RequestMapping("/proyecto")
+@RequestMapping("/proyect")
 @CrossOrigin(origins = "https://front-end-mariz.web.app")
 public class CProyecto {
     @Autowired
