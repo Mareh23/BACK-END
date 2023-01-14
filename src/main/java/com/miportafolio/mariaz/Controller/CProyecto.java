@@ -53,12 +53,12 @@ public class CProyecto {
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoProyecto dtoproyecto){      
-        if(StringUtils.isBlank(dtoproyecto.getNombreP()))
+        if(StringUtils.isBlank(dtoproyecto.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()))
+        if(sProyecto.existsByNombre(dtoproyecto.getNombre()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), dtoproyecto.getDescripcionP());
+        Proyecto proyecto = new Proyecto(dtoproyecto.getNombre(), dtoproyecto.getDescripcion());
         sProyecto.save(proyecto);
         
         return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
@@ -70,15 +70,15 @@ public class CProyecto {
         if(!sProyecto.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
-        if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()) && sProyecto.getByNombreP(dtoproyecto.getNombreP()).get().getId() != id)
+        if(sProyecto.existsByNombre(dtoproyecto.getNombre()) && sProyecto.getByNombre(dtoproyecto.getNombre()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
-        if(StringUtils.isBlank(dtoproyecto.getNombreP()))
+        if(StringUtils.isBlank(dtoproyecto.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Proyecto proyecto = sProyecto.getOne(id).get();
-        proyecto.setNombreP(dtoproyecto.getNombreP());
-        proyecto.setDescripcionP((dtoproyecto.getDescripcionP()));
+        proyecto.setNombre(dtoproyecto.getNombre());
+        proyecto.setDescripcion((dtoproyecto.getDescripcion()));
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizada"), HttpStatus.OK);

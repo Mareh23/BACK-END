@@ -23,8 +23,8 @@ public class SProyecto {
          return rProyecto.findById(id);
      }
      
-     public Optional<Proyecto> getByNombreP(String nombreP){
-         return rProyecto.findByNombreP(nombreP);
+     public Optional<Proyecto> getByNombre(String nombre){
+         return rProyecto.findByNombre(nombre);
      }
      
      public void save(Proyecto proyecto){
@@ -39,7 +39,7 @@ public class SProyecto {
          return rProyecto.existsById(id);
      }
      
-     public boolean existsByNombreP(String nombreP){
-         return rProyecto.existsByNombreP(nombreP);
+     public boolean existsByNombre(String nombre){
+         return rProyecto.existsByNombre(nombre);
      }
 }

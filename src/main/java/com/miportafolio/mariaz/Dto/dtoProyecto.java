@@ -5,36 +5,36 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoProyecto {
     @NotBlank
-    private String nombreP;
+    private String nombre;
     @NotBlank
-    private String descripcionP;
+    private String descripcion;
     
     //Constructores
 
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String nombreP, String descripcionP) {
-        this.nombreP = nombreP;
-        this.descripcionP = descripcionP;
+    public dtoProyecto(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
     
     //Getters & Setters
 
-    public String getNombreP() {
-        return nombreP;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreP(String nombreP) {
-        this.nombreP = nombreP;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDescripcionP() {
-        return descripcionP;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescripcionP(String descripcionP) {
-        this.descripcionP = descripcionP;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     
