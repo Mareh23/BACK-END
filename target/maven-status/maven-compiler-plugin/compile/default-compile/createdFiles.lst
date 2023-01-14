@@ -1,3 +1,4 @@
+com\miportafolio\mariaz\Controller\CProyecto.class
 com\miportafolio\mariaz\Security\jwt\JwtProvider.class
 com\miportafolio\mariaz\Dto\dtoHys.class
 com\miportafolio\mariaz\MariazApplication.class
@@ -6,10 +7,13 @@ com\miportafolio\mariaz\Security\Dto\NuevoUsuario.class
 com\miportafolio\mariaz\Repository\REducacion.class
 com\miportafolio\mariaz\Entity\Educacion.class
 com\miportafolio\mariaz\Service\ImpPersonaService.class
+com\miportafolio\mariaz\Entity\Proyecto.class
+com\miportafolio\mariaz\Service\SProyecto.class
 com\miportafolio\mariaz\Security\Dto\JwtDto.class
 com\miportafolio\mariaz\Security\Enums\RolNombre.class
 com\miportafolio\mariaz\Security\jwt\JwtEntryPoint.class
 com\miportafolio\mariaz\Security\Controller\AuthController.class
+com\miportafolio\mariaz\Repository\RProyecto.class
 com\miportafolio\mariaz\Service\Shys.class
 com\miportafolio\mariaz\Service\SEducacion.class
 com\miportafolio\mariaz\Security\Entity\UsuarioPrincipal.class
@@ -18,6 +22,7 @@ com\miportafolio\mariaz\Service\SExperiencia.class
 com\miportafolio\mariaz\Entity\hys.class
 com\miportafolio\mariaz\Security\MainSecurity.class
 com\miportafolio\mariaz\Dto\dtoExperiencia.class
+com\miportafolio\mariaz\Dto\dtoProyecto.class
 com\miportafolio\mariaz\Dto\dtoPersona.class
 com\miportafolio\mariaz\Security\Controller\Mensaje.class
 com\miportafolio\mariaz\Entity\Experiencia.class
