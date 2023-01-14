@@ -46,7 +46,7 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
         sProyecto.delete(id);
-        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("proyecto eliminado"), HttpStatus.OK);
     }
 
     
