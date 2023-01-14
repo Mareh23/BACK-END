@@ -22,7 +22,7 @@ import org.apache.commons.lang3.StringUtils;
 
 @RestController
 @RequestMapping("/proyect")
-@CrossOrigin(origins = "https://front-end-mariz.web.app")
+@CrossOrigin(origins = {"https://front-end-mariz.web.app", "http://localhost:4200"})
 public class CProyecto {
     @Autowired
     SProyecto sProyecto;
