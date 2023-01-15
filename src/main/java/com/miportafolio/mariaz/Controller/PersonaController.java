@@ -2,6 +2,7 @@ package com.miportafolio.mariaz.Controller;
 
 import com.miportafolio.mariaz.Dto.dtoPersona;
 import com.miportafolio.mariaz.Entity.Persona;
+import com.miportafolio.mariaz.Repository.IPersonaRepository;
 import com.miportafolio.mariaz.Security.Controller.Mensaje;
 import com.miportafolio.mariaz.Service.ImpPersonaService;
 import java.util.List;
@@ -10,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
     @Autowired
     ImpPersonaService personaService;
+    IPersonaRepository ipersonaRepository;
     
     @GetMapping("/lista")
     public ResponseEntity<List<Persona>> list(){
@@ -40,31 +44,20 @@ public class PersonaController {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
     
-    /*@DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!personaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         personaService.delete(id);
-        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
-    } */
+        return new ResponseEntity(new Mensaje("Persona eliminada"), HttpStatus.OK);
+    } 
     
-    /*@PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoEducacion dtoeducacion){
-        if(StringUtils.isBlank(dtoeducacion.getNombreE())){
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if(personaService.existsByNombreE(dtoeducacion.getNombreE())){
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        }
-        
-        Educacion educacion = new Educacion(
-                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
-            );
-        personaService.save(educacion);
-        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
-                
-    } */
+    @PostMapping("/personas/crear")
+    public String createPersona(@RequestBody Persona persona){
+        ipersonaRepository.save(persona);
+        return "La persona fue creada correctamente";
+}      
     
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
@@ -89,4 +82,5 @@ public class PersonaController {
         
         return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
     }
+
 }
