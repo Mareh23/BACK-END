@@ -1,3 +1,4 @@
-FROM amazoncorretto:8-alpine-jdk
-COPY target/mariaz-0.0.1-SNAPSHOT mariaz-app.jar
+FROM amazoncorreto:8-alpine-jdk
+MAINTAINER MARIA
+COPY target/mariaz-0.0.1-SNAPSHOT.jar mariaz-app.jar
 ENTRYPOINT ["java","-jar","/mariaz-app.jar"]
