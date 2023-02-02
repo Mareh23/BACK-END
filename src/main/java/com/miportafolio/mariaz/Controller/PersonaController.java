@@ -30,7 +30,7 @@ public class PersonaController {
     
     @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
-        ipersonaRepository.save(persona);
+        personaService.save(persona);
         return "La persona fue creada correctamente";
     }
     @GetMapping("/lista")
