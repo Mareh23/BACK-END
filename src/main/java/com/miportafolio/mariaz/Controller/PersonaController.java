@@ -28,7 +28,7 @@ public class PersonaController {
     @Autowired
     IPersonaRepository ipersonaRepository;
     
-    @PostMapping("/personas/crear")
+    @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaRepository.save(persona);
         return "La persona fue creada correctamente";
