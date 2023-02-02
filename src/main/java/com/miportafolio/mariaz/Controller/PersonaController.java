@@ -2,6 +2,7 @@ package com.miportafolio.mariaz.Controller;
 
 import com.miportafolio.mariaz.Dto.dtoPersona;
 import com.miportafolio.mariaz.Entity.Persona;
+import com.miportafolio.mariaz.Repository.IPersonaRepository;
 import com.miportafolio.mariaz.Security.Controller.Mensaje;
 import com.miportafolio.mariaz.Service.ImpPersonaService;
 import java.util.List;
@@ -25,8 +26,13 @@ public class PersonaController {
     @Autowired
     ImpPersonaService personaService;
     @Autowired
-    IPersonaRepository ipersonaRepository
+    IPersonaRepository ipersonaRepository;
     
+    @PostMapping("/personas/crear")
+    public String createPersona(@RequestBody Persona persona){
+        ipersonaRepository.save(persona);
+        return "La persona fue creada correctamente";
+    }
     @GetMapping("/lista")
     public ResponseEntity<List<Persona>> list(){
         List<Persona> list = personaService.list();
@@ -90,10 +96,5 @@ public class PersonaController {
         personaService.save(persona);
         
         return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
-    }
-    @PostMapping("/personas/crear")
-    public String createPersona(@RequestBody Persona persona){
-        ipersonaRepository.save(persona);
-        return "La persona fue creada correctamente";
     }
 }
