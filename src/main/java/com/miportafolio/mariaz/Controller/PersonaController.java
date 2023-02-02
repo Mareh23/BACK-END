@@ -26,6 +26,7 @@ public class PersonaController {
     @Autowired
     ImpPersonaService personaService;
     @Autowired
+    IPersonaRepository ipersonaRepository;
     
     @GetMapping("/lista")
     public ResponseEntity<List<Persona>> list(){
@@ -91,17 +92,10 @@ public class PersonaController {
         
         return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
     }
-   
-    @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){      
-        if(StringUtils.isBlank(dtopersona.getNombre()))
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(personaService.existsByNombre(dtopersona.getNombre()))
-            return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
-        
-        Persona persona = new Persona(dtopersona.getNombre(), dtopersona.getApellido(), dtopersona.getDescripcion(), dtopersona.getImg());
-        personaService.save(persona);
-        
-        return new ResponseEntity(new Mensaje("Persona agregada"), HttpStatus.OK);
+    
+    @PostMapping("/crear")
+    public String createPersona(@RequestBody Persona persona){
+        ipersonaRepository.save(persona);
+        return "La persona fue creada correctamente";
     }
 }
